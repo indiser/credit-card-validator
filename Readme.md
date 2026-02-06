@@ -30,8 +30,8 @@ This application provides a user-friendly interface to validate credit card numb
 
 1. Clone or download this repository:
    ```bash
-   git clone https://github.com/indiser/credit-card-validator
-   cd "credit-card-validator"
+   git clone <repository-url>
+   cd "Credit Card geneerator"
    ```
 
 2. Create a virtual environment (recommended):
@@ -48,7 +48,7 @@ This application provides a user-friendly interface to validate credit card numb
 
 ## Usage
 
-### Running the Application
+### Running the Web Application
 
 Start the Flask development server:
 
@@ -57,6 +57,46 @@ python app.py
 ```
 
 The application will be available at `http://localhost:5000`
+
+### Running the CLI Tool
+
+For a command-line interface to generate and validate Luhn numbers:
+
+```bash
+python main.py
+```
+
+This launches an interactive menu with options to generate valid numbers for:
+
+**Financial:**
+- Visa (16 digits)
+- Visa Old (13 digits)
+- MasterCard (16 digits)
+- American Express (15 digits)
+- Discover (16 digits)
+- Diners Club (14 digits)
+- Maestro (19 digits)
+- JCB (16 digits)
+
+**Telecom:**
+- IMEI (15 digits)
+- ICCID (19 digits)
+- ICCID Long (20 digits)
+
+**Government IDs:**
+- US NPI (10 digits)
+- Canadian SIN (9 digits)
+- South African ID (13 digits)
+- Israeli ID (9 digits)
+- Greek AMKA (11 digits)
+- Swedish Personnummer (10 digits)
+- Swedish Personnummer Long (12 digits)
+
+**Other:**
+- UPC Barcode (12 digits)
+- USPS Tracking (22 digits)
+
+The CLI also supports validating Luhn numbers manually.
 
 ### Web Interface
 
@@ -112,6 +152,9 @@ Response:
 ```
 Credit Card Generator/
 ├── app.py              # Main Flask application with API routes
+├── main.py             # CLI tool for Luhn number generation and validation
+│                       # Features LuhnFactory class supporting multiple card types
+│                       # and ID formats (financial, telecom, government)
 ├── luhn.py             # Luhn algorithm implementation (alternative version)
 ├── luhn2.py            # Luhn algorithm implementation (alternative version)
 ├── templates/
@@ -171,4 +214,3 @@ For issues, questions, or contributions, please refer to the repository maintain
 ---
 
 **Last Updated:** February 2026
-
