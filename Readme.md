@@ -30,8 +30,8 @@ This application provides a user-friendly interface to validate credit card numb
 
 1. Clone or download this repository:
    ```bash
-   git clone <repository-url>
-   cd "Credit Card geneerator"
+   git clone https://github.com/indiser/credit-card-validator
+   cd "credit-card-validator"
    ```
 
 2. Create a virtual environment (recommended):
@@ -171,3 +171,4 @@ For issues, questions, or contributions, please refer to the repository maintain
 ---
 
 **Last Updated:** February 2026
+
