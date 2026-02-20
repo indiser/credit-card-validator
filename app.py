@@ -85,4 +85,5 @@ def ratelimit_handler(e):
 
 if __name__ == "__main__":
     # Debug=True is for you. Set to False before you show a client.
-    app.run(debug=True)
+
+    app.run()
